@@ -13,11 +13,12 @@ const toggleMenu = () => {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <div class="flex items-center">
-          <div class="flex-shrink-0">
+          <router-link to="/" class="flex-shrink-0 flex items-center gap-x-2">
+            <img class="h-8 w-auto" src="/logo.png" alt="諾秋工作室 Logo" />
             <span class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400">
               諾秋工作室
             </span>
-          </div>
+          </router-link>
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <router-link to="/" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">首頁</router-link>
