@@ -20,11 +20,11 @@ const toggleMenu = () => {
           </div>
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
-              <a href="#" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">首頁</a>
-              <a href="#about" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">關於我們</a>
-              <a href="#services" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">服務項目</a>
-              <a href="#portfolio" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">作品集</a>
-              <a href="#contact" class="bg-indigo-600/90 hover:bg-indigo-500 text-white px-4 py-2 rounded-md text-sm font-medium transition-all shadow-lg shadow-indigo-500/30">聯絡我們</a>
+              <router-link to="/" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">首頁</router-link>
+              <router-link to="/#about" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">關於我們</router-link>
+              <router-link to="/#services" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">服務項目</router-link>
+              <router-link to="/#portfolio" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">作品集</router-link>
+              <router-link to="/#contact" class="bg-indigo-600/90 hover:bg-indigo-500 text-white px-4 py-2 rounded-md text-sm font-medium transition-all shadow-lg shadow-indigo-500/30">聯絡我們</router-link>
             </div>
           </div>
         </div>
@@ -42,11 +42,11 @@ const toggleMenu = () => {
     <!-- Mobile menu -->
     <div v-show="isMenuOpen" class="md:hidden bg-slate-900 border-b border-slate-800 absolute w-full transition-all duration-300 ease-in-out origin-top">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="#" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">首頁</a>
-        <a href="#about" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">關於我們</a>
-        <a href="#services" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">服務項目</a>
-        <a href="#portfolio" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">作品集</a>
-        <a href="#contact" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">聯絡我們</a>
+        <router-link to="/" @click="isMenuOpen = false" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">首頁</router-link>
+        <router-link to="/#about" @click="isMenuOpen = false" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">關於我們</router-link>
+        <router-link to="/#services" @click="isMenuOpen = false" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">服務項目</router-link>
+        <router-link to="/#portfolio" @click="isMenuOpen = false" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">作品集</router-link>
+        <router-link to="/#contact" @click="isMenuOpen = false" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">聯絡我們</router-link>
       </div>
     </div>
   </nav>

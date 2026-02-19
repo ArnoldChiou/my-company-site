@@ -37,7 +37,6 @@
               <h3 class="text-sm font-semibold leading-6 text-white">解決方案</h3>
               <ul role="list" class="mt-6 space-y-4">
                 <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">品牌網站</a></li>
-                <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">電子商務</a></li>
                 <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">企業系統</a></li>
               </ul>
             </div>
@@ -54,22 +53,21 @@
               <h3 class="text-sm font-semibold leading-6 text-white">公司</h3>
               <ul role="list" class="mt-6 space-y-4">
                 <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">關於我們</a></li>
-                <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">徵才資訊</a></li>
                 <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">新聞中心</a></li>
               </ul>
             </div>
             <div class="mt-10 md:mt-0">
               <h3 class="text-sm font-semibold leading-6 text-white">法律</h3>
               <ul role="list" class="mt-6 space-y-4">
-                <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">隱私權政策</a></li>
-                <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">服務條款</a></li>
+                <li><router-link to="/privacy-policy" class="text-sm leading-6 text-gray-300 hover:text-white">隱私權政策</router-link></li>
+                <li><router-link to="/terms-of-service" class="text-sm leading-6 text-gray-300 hover:text-white">服務條款</router-link></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
       <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-        <p class="text-xs leading-5 text-gray-400">&copy; 2025 諾秋工作室 Noqiu Studio. All rights reserved.</p>
+        <p class="text-xs leading-5 text-gray-400">&copy; 2025 諾秋工作室 NordChiou Studio. All rights reserved.</p>
       </div>
     </div>
   </footer>
