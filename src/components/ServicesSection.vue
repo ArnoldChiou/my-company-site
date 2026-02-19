@@ -5,11 +5,11 @@
         <h2 class="text-base font-semibold leading-7 text-indigo-400">我們的專業</h2>
         <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">全方位的數位解決方案</p>
         <p class="mt-6 text-lg leading-8 text-gray-300">
-          無論是品牌形象網站、高效能應用程式，或是複雜的後端系統，我們都能為您量身打造。
+          無論是品牌形象網站、高效能應用程式、複雜的後端系統，我們都能為您量身打造。
         </p>
       </div>
       <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-        <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+        <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none md:grid-cols-2 lg:grid-cols-2">
           <div class="flex flex-col group p-6 rounded-2xl transition-all duration-300 hover:bg-white/5 border border-transparent hover:border-white/10">
             <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
               <div class="h-10 w-10 flex items-center justify-center rounded-lg bg-indigo-600 group-hover:bg-indigo-500 transition-colors shadow-lg shadow-indigo-500/50">
@@ -28,13 +28,13 @@
             <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
               <div class="h-10 w-10 flex items-center justify-center rounded-lg bg-indigo-600 group-hover:bg-indigo-500 transition-colors shadow-lg shadow-indigo-500/50">
                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                   <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                   <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.45 15.08 15.08 0 01-.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.438 4.438 0 002.946-2.946 4.493 4.493 0 004.306-1.758" />
                  </svg>
               </div>
-              APP 行動應用開發
+              高效能系統開發
             </dt>
             <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-              <p class="flex-auto">iOS 與 Android 雙平台開發，使用 Flutter 或 React Native 技術，快速部署、高效能，助您搶佔行動市場。</p>
+              <p class="flex-auto">告別系統卡頓與延遲。我們專注於建構高併發、高可用性的現代化架構，用最嚴謹的程式碼，為您的產品提供如閃電般的極速體驗。</p>
             </dd>
           </div>
           
@@ -51,6 +51,21 @@
               <p class="flex-auto">從企業 ERP 到客製化管理系統，我們提供完整的後端解決方案與雲端部署服務 (AWS, GCP, Azure)。</p>
             </dd>
           </div>
+
+          <div class="flex flex-col group p-6 rounded-2xl transition-all duration-300 hover:bg-white/5 border border-transparent hover:border-white/10">
+            <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+              <div class="h-10 w-10 flex items-center justify-center rounded-lg bg-indigo-600 group-hover:bg-indigo-500 transition-colors shadow-lg shadow-indigo-500/50">
+                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                </svg>
+              </div>
+              專業系統維護
+            </dt>
+            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+              <p class="flex-auto">針對既有系統提供日常維護、效能優化與客製化功能開發，確保您的服務穩定運行，並隨業務需求持續進化。</p>
+            </dd>
+          </div>
+
         </dl>
       </div>
     </div>
