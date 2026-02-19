@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/my-company-site/', // 修改這裡：換成您的 GitHub Repository 名稱，前後要有斜線
+  base: '/', // 修改這裡：換成您的 GitHub Repository 名稱，前後要有斜線
   plugins: [
     vue(),
   ],
