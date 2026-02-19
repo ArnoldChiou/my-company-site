@@ -3,6 +3,7 @@ import NavBar from './components/NavBar.vue'
 import HeroSection from './components/HeroSection.vue'
 import ServicesSection from './components/ServicesSection.vue'
 import AboutSection from './components/AboutSection.vue'
+import PortfolioSection from './components/PortfolioSection.vue'
 import FooterSection from './components/FooterSection.vue'
 </script>
 
@@ -13,6 +14,7 @@ import FooterSection from './components/FooterSection.vue'
       <HeroSection />
       <AboutSection />
       <ServicesSection />
+      <PortfolioSection />
     </main>
     <FooterSection />
   </div>
