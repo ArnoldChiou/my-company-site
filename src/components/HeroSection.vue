@@ -24,7 +24,7 @@ onMounted(() => {
           <a href="#" class="inline-flex space-x-6">
             <span class="rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-600/20">最新消息</span>
             <span class="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-slate-300">
-              <span>2025 全新設計方案上線</span>
+              <span>2026 全新設計方案上線</span>
               <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
               </svg>

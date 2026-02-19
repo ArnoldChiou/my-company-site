@@ -67,7 +67,7 @@
         </div>
       </div>
       <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-        <p class="text-xs leading-5 text-gray-400">&copy; 2025 諾秋工作室 NordChiou Studio. All rights reserved.</p>
+        <p class="text-xs leading-5 text-gray-400">&copy; 2026 諾秋工作室 NordChiou Studio. All rights reserved.</p>
       </div>
     </div>
   </footer>

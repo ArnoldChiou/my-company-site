@@ -18,7 +18,9 @@
         <div class="lg:pr-4">
           <div class="lg:max-w-lg">
             <p class="text-base font-semibold leading-7 text-indigo-400">關於諾秋</p>
-            <h1 class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">不只是寫程式，更是創造價值</h1>
+            <h1 class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              不只是寫程式，更是創造價值
+            </h1>
             <p class="mt-6 text-xl leading-8 text-gray-300">
               諾秋工作室成立於 2022 年，我們是一群熱愛技術的開發者與設計師。我們的使命是透過最先進的網頁技術，與客戶共同成長。
             </p>
