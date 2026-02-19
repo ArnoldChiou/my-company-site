@@ -1,0 +1,113 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const form = ref({
+  name: '',
+  email: '',
+  message: ''
+})
+
+// 控制按鈕狀態
+const isSubmitting = ref(false)
+
+const submitForm = async () => {
+  if (isSubmitting.value) return
+  isSubmitting.value = true
+
+  try {
+    // 請將下方的 URL 替換成您在 Formspree 取得的網址
+    const response = await fetch('https://formspree.io/f/xojnlbvk', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(form.value)
+    })
+
+    if (response.ok) {
+      alert('感謝您的來信！我們已經收到您的訊息。')
+      form.value = { name: '', email: '', message: '' } // 清空表單
+    } else {
+      alert('發生錯誤，請稍後再試或直接透過 Email 聯繫我們。')
+    }
+  } catch (error) {
+    alert('網路連線異常，請檢查您的網路狀態。')
+  } finally {
+    isSubmitting.value = false
+  }
+}
+</script>
+<template>
+  <div id="contact" class="relative isolate bg-slate-900 py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2 class="text-base font-semibold leading-7 text-indigo-400">聯絡我們</h2>
+        <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">準備好開始您的專案了嗎？</p>
+        <p class="mt-6 text-lg leading-8 text-gray-300">
+          無論是系統開發、網頁設計或技術諮詢，我們都隨時準備好為您提供專業的解決方案。請填寫下方表單或直接透過電子郵件與我們聯繫。
+        </p>
+      </div>
+      
+      <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
+          <h3 class="text-xl font-semibold leading-7 text-white mb-6">聯絡資訊</h3>
+          <dl class="space-y-6 text-base leading-7 text-gray-300">
+            <div class="flex gap-x-4">
+              <dt class="flex-none">
+                <span class="sr-only">Email</span>
+                <svg class="h-7 w-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+              </dt>
+              <dd><a class="hover:text-white transition-colors" href="mailto:contact@nordchiou@gmail.com">nordchiou@gmail.com</a></dd>
+            </div>
+            <div class="flex gap-x-4">
+              <dt class="flex-none">
+                <span class="sr-only">營業時間</span>
+                <svg class="h-7 w-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </dt>
+              <dd>週一至週日 <br>07:00 - 24:00</dd>
+            </div>
+          </dl>
+        </div>
+
+        <form @submit.prevent="submitForm" class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
+          <div class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium leading-6 text-white">姓名 / 公司名稱</label>
+              <div class="mt-2">
+                <input v-model="form.name" type="text" id="name" required class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 placeholder:text-gray-500" placeholder="王大明">
+              </div>
+            </div>
+            
+            <div>
+              <label for="email" class="block text-sm font-medium leading-6 text-white">電子郵件</label>
+              <div class="mt-2">
+                <input v-model="form.email" type="email" id="email" required class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 placeholder:text-gray-500" placeholder="your@email.com">
+              </div>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium leading-6 text-white">專案需求與訊息</label>
+              <div class="mt-2">
+                <textarea v-model="form.message" id="message" rows="4" required class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 placeholder:text-gray-500" placeholder="請簡述您的專案需求或是想詢問的問題..."></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-end">
+            <button 
+              type="submit" 
+              :disabled="isSubmitting"
+              class="rounded-md bg-indigo-600 px-6 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all shadow-indigo-500/30 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {{ isSubmitting ? '傳送中...' : '送出訊息' }}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>
