@@ -53,7 +53,7 @@
               <h3 class="text-sm font-semibold leading-6 text-white">公司</h3>
               <ul role="list" class="mt-6 space-y-4">
                 <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">關於我們</a></li>
-                <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">新聞中心</a></li>
+                <li><router-link to="/news" class="text-sm leading-6 text-gray-300 hover:text-white">新聞中心</router-link></li>
               </ul>
             </div>
             <div class="mt-10 md:mt-0">
