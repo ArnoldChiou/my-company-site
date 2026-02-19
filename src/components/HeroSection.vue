@@ -52,7 +52,7 @@ onMounted(() => {
           <div class="max-w-2xl flex-none sm:max-w-3xl lg:max-w-none"> <div class="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4 backdrop-blur-sm bg-white/5 border border-white/10 shadow-2xl shadow-indigo-500/20 transform hover:scale-[1.02] transition-transform duration-500">
             <img src="https://i.postimg.cc/zXMKvqRs/Gemini-Generated-Image-9fz9r49fz9r49fz9.png" 
                  alt="App screenshot" 
-                 class="w-full lg:w-[50rem] max-h-[40rem] object-cover object-top rounded-md shadow-2xl ring-1 ring-gray-900/10 opacity-90 hover:opacity-100 transition-opacity">
+                 class="w-full lg:w-[60rem] max-h-[40rem] object-cover object-top rounded-md shadow-2xl ring-1 ring-gray-900/10 opacity-90 hover:opacity-100 transition-opacity">
           </div>
         </div>
         </div>
