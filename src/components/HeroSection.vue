@@ -48,11 +48,13 @@ onMounted(() => {
       </div>
       
       <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none lg:flex-none xl:ml-32">
-        <div class="max-w-2xl flex-none sm:max-w-3xl lg:max-w-none"> <div class="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4 backdrop-blur-sm bg-white/5 border border-white/10 shadow-2xl shadow-indigo-500/20 transform hover:scale-[1.02] transition-transform duration-500">
+        <div class="hidden sm:flex mx-auto mt-16 max-w-2xl sm:mt-24 lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none lg:flex-none xl:ml-32">
+          <div class="max-w-2xl flex-none sm:max-w-3xl lg:max-w-none"> <div class="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4 backdrop-blur-sm bg-white/5 border border-white/10 shadow-2xl shadow-indigo-500/20 transform hover:scale-[1.02] transition-transform duration-500">
             <img src="https://i.postimg.cc/6p7cb2tQ/safar-safarov-ko-Od-Uvf-Gr4c-unsplash.jpg" 
                  alt="App screenshot" 
                  class="w-full lg:w-[100rem] max-h-[40rem] object-cover object-top rounded-md shadow-2xl ring-1 ring-gray-900/10 opacity-90 hover:opacity-100 transition-opacity">
           </div>
+        </div>
         </div>
       </div>
     </div>
