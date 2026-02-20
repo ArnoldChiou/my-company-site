@@ -39,33 +39,33 @@ const submitForm = async () => {
 }
 </script>
 <template>
-  <div id="contact" class="relative isolate bg-slate-900 py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl lg:mx-0">
-        <h2 class="text-base font-semibold leading-7 text-indigo-400">聯絡我們</h2>
-        <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">準備好開始您的專案了嗎？</p>
-        <p class="mt-6 text-lg leading-8 text-gray-300">
+  <div id="contact" class="contact-section">
+    <div class="content-container">
+      <div class="header-container">
+        <h2 class="section-subtitle">聯絡我們</h2>
+        <p class="section-title">準備好開始您的專案了嗎？</p>
+        <p class="section-description">
           無論是系統開發、網頁設計或技術諮詢，我們都隨時準備好為您提供專業的解決方案。請填寫下方表單或直接透過電子郵件與我們聯繫。
         </p>
       </div>
       
-      <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-        <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
-          <h3 class="text-xl font-semibold leading-7 text-white mb-6">聯絡資訊</h3>
-          <dl class="space-y-6 text-base leading-7 text-gray-300">
-            <div class="flex gap-x-4">
+      <div class="contact-grid">
+        <div class="info-card">
+          <h3 class="info-title">聯絡資訊</h3>
+          <dl class="info-list">
+            <div class="info-item">
               <dt class="flex-none">
                 <span class="sr-only">Email</span>
-                <svg class="h-7 w-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <svg class="info-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                 </svg>
               </dt>
-              <dd><a class="hover:text-white transition-colors" href="mailto:contact@nordchiou@gmail.com">nordchiou@gmail.com</a></dd>
+              <dd><a class="info-link" href="mailto:contact@nordchiou@gmail.com">nordchiou@gmail.com</a></dd>
             </div>
-            <div class="flex gap-x-4">
+            <div class="info-item">
               <dt class="flex-none">
                 <span class="sr-only">營業時間</span>
-                <svg class="h-7 w-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <svg class="info-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </dt>
@@ -74,26 +74,26 @@ const submitForm = async () => {
           </dl>
         </div>
 
-        <form @submit.prevent="submitForm" class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
+        <form @submit.prevent="submitForm" class="contact-form">
           <div class="space-y-6">
             <div>
-              <label for="name" class="block text-sm font-medium leading-6 text-white">姓名 / 公司名稱</label>
+              <label for="name" class="form-label">姓名 / 公司名稱</label>
               <div class="mt-2">
-                <input v-model="form.name" type="text" id="name" required class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 placeholder:text-gray-500" placeholder="王大明">
+                <input v-model="form.name" type="text" id="name" required class="form-input" placeholder="王大明">
               </div>
             </div>
             
             <div>
-              <label for="email" class="block text-sm font-medium leading-6 text-white">電子郵件</label>
+              <label for="email" class="form-label">電子郵件</label>
               <div class="mt-2">
-                <input v-model="form.email" type="email" id="email" required class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 placeholder:text-gray-500" placeholder="your@email.com">
+                <input v-model="form.email" type="email" id="email" required class="form-input" placeholder="your@email.com">
               </div>
             </div>
 
             <div>
-              <label for="message" class="block text-sm font-medium leading-6 text-white">專案需求與訊息</label>
+              <label for="message" class="form-label">專案需求與訊息</label>
               <div class="mt-2">
-                <textarea v-model="form.message" id="message" rows="4" required class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 placeholder:text-gray-500" placeholder="請簡述您的專案需求或是想詢問的問題..."></textarea>
+                <textarea v-model="form.message" id="message" rows="4" required class="form-input" placeholder="請簡述您的專案需求或是想詢問的問題..."></textarea>
               </div>
             </div>
           </div>
@@ -101,7 +101,7 @@ const submitForm = async () => {
             <button 
               type="submit" 
               :disabled="isSubmitting"
-              class="rounded-md bg-indigo-600 px-6 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all shadow-indigo-500/30 disabled:opacity-50 disabled:cursor-not-allowed"
+              class="submit-btn"
             >
               {{ isSubmitting ? '傳送中...' : '送出訊息' }}
             </button>
@@ -111,3 +111,74 @@ const submitForm = async () => {
     </div>
   </div>
 </template>
+
+<style scoped>
+@reference "tailwindcss";
+.contact-section {
+  @apply relative isolate bg-slate-900 py-24 sm:py-32;
+}
+
+.content-container {
+  @apply mx-auto max-w-7xl px-6 lg:px-8;
+}
+
+.header-container {
+  @apply mx-auto max-w-2xl lg:mx-0;
+}
+
+.section-subtitle {
+  @apply text-base font-semibold leading-7 text-indigo-400;
+}
+
+.section-title {
+  @apply mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl;
+}
+
+.section-description {
+  @apply mt-6 text-lg leading-8 text-gray-300;
+}
+
+.contact-grid {
+  @apply mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-2;
+}
+
+.info-card {
+  @apply bg-slate-800/50 p-8 rounded-2xl border border-slate-700;
+}
+
+.info-title {
+  @apply text-xl font-semibold leading-7 text-white mb-6;
+}
+
+.info-list {
+  @apply space-y-6 text-base leading-7 text-gray-300;
+}
+
+.info-item {
+  @apply flex gap-x-4;
+}
+
+.info-icon {
+  @apply h-7 w-6 text-indigo-400;
+}
+
+.info-link {
+  @apply hover:text-white transition-colors;
+}
+
+.contact-form {
+  @apply bg-slate-800/50 p-8 rounded-2xl border border-slate-700;
+}
+
+.form-label {
+  @apply block text-sm font-medium leading-6 text-white;
+}
+
+.form-input {
+  @apply block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 placeholder:text-gray-500;
+}
+
+.submit-btn {
+  @apply rounded-md bg-indigo-600 px-6 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all shadow-indigo-500/30 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+</style>

@@ -40,26 +40,26 @@ const formatDate = (timestamp: number) => {
 </script>
 
 <template>
-  <div class="bg-slate-900 min-h-screen py-24 sm:py-32">
-    <div class="mx-auto max-w-4xl px-6 lg:px-8">
-      <h1 class="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-2">新聞中心</h1>
-      <p class="text-gray-400 mb-10">最新科技與程式開發動態 (資料來源: Hacker News)</p>
+  <div class="page-container">
+    <div class="content-wrapper">
+      <h1 class="page-title">新聞中心</h1>
+      <p class="page-description">最新科技與程式開發動態 (資料來源: Hacker News)</p>
 
-      <div v-if="isLoading" class="text-indigo-400 text-center py-10">
+      <div v-if="isLoading" class="loading-state">
         新聞載入中...
       </div>
 
-      <div v-else class="space-y-4">
+      <div v-else class="news-list">
         <a 
           v-for="news in newsList" 
           :key="news.id" 
           :href="news.url" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="block bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-indigo-500 transition-colors"
+          class="news-card"
         >
-          <h2 class="text-lg font-semibold text-white mb-2">{{ news.title }}</h2>
-          <div class="flex gap-4 text-sm text-gray-400">
+          <h2 class="news-title">{{ news.title }}</h2>
+          <div class="news-meta">
             <span>發布日期: {{ formatDate(news.time) }}</span>
             <span>熱度: {{ news.score }}</span>
           </div>
@@ -68,3 +68,42 @@ const formatDate = (timestamp: number) => {
     </div>
   </div>
 </template>
+
+<style scoped>
+@reference "tailwindcss";
+.page-container {
+  @apply bg-slate-900 min-h-screen py-24 sm:py-32;
+}
+
+.content-wrapper {
+  @apply mx-auto max-w-4xl px-6 lg:px-8;
+}
+
+.page-title {
+  @apply text-3xl font-bold tracking-tight text-white sm:text-4xl mb-2;
+}
+
+.page-description {
+  @apply text-gray-400 mb-10;
+}
+
+.loading-state {
+  @apply text-indigo-400 text-center py-10;
+}
+
+.news-list {
+  @apply space-y-4;
+}
+
+.news-card {
+  @apply block bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-indigo-500 transition-colors;
+}
+
+.news-title {
+  @apply text-lg font-semibold text-white mb-2;
+}
+
+.news-meta {
+  @apply flex gap-4 text-sm text-gray-400;
+}
+</style>

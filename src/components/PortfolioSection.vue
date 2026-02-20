@@ -37,19 +37,58 @@ const projects = ref([
 </script>
 
 <template>
-  <div id="portfolio" class="bg-slate-900 py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl lg:text-center">
-        <h2 class="text-base font-semibold leading-7 text-indigo-400">成功案例</h2>
-        <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">作品集</p>
+  <div id="portfolio" class="portfolio-section">
+    <div class="content-container">
+      <div class="header-container">
+        <h2 class="section-subtitle">成功案例</h2>
+        <p class="section-title">作品集</p>
       </div>
       
-      <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        <div v-for="project in projects" :key="project.id" class="bg-slate-800 rounded-2xl p-6 border border-slate-700">
-          <h3 class="text-lg font-semibold text-white">{{ project.title }}</h3>
-          <p class="mt-2 text-sm text-gray-400">{{ project.description }}</p>
+      <div class="projects-grid">
+        <div v-for="project in projects" :key="project.id" class="project-card">
+          <h3 class="project-title">{{ project.title }}</h3>
+          <p class="project-description">{{ project.description }}</p>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+@reference "tailwindcss";
+.portfolio-section {
+  @apply bg-slate-900 py-24 sm:py-32;
+}
+
+.content-container {
+  @apply mx-auto max-w-7xl px-6 lg:px-8;
+}
+
+.header-container {
+  @apply mx-auto max-w-2xl lg:text-center;
+}
+
+.section-subtitle {
+  @apply text-base font-semibold leading-7 text-indigo-400;
+}
+
+.section-title {
+  @apply mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl;
+}
+
+.projects-grid {
+  @apply mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3;
+}
+
+.project-card {
+  @apply bg-slate-800 rounded-2xl p-6 border border-slate-700;
+}
+
+.project-title {
+  @apply text-lg font-semibold text-white;
+}
+
+.project-description {
+  @apply mt-2 text-sm text-gray-400;
+}
+</style>
