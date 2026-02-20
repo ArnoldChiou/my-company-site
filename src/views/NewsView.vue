@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, shallowRef, onMounted } from 'vue'
 import { useHead } from '@unhead/vue'
 import BaseCard from '../components/BaseCard.vue'
 
@@ -31,10 +31,17 @@ interface NewsItem {
   url: string
   time: number
   score: number
+  formattedTime?: string // 加上預先格式化好的時間
 }
 
-const newsList = ref<NewsItem[]>([])
+// 效能優化：使用 shallowRef 替代 ref 來避免巨大列表的深度響應性開銷
+const newsList = shallowRef<NewsItem[]>([])
 const isLoading = ref(true)
+
+// 轉換時間格式的純函數
+const formatDate = (timestamp: number) => {
+  return new Date(timestamp * 1000).toLocaleDateString('zh-TW')
+}
 
 // 取得 Hacker News 最新科技與程式新聞
 onMounted(async () => {
@@ -49,18 +56,19 @@ onMounted(async () => {
       fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`).then(r => r.json())
     )
     
-    newsList.value = await Promise.all(promises)
+    const results = await Promise.all(promises)
+    
+    // 效能優化：在 JavaScript 端先將時間格式化好，避免每次 Vue 重繪時都在模板中執行函數
+    newsList.value = results.map(item => ({
+      ...item,
+      formattedTime: formatDate(item.time)
+    }))
   } catch (error) {
     console.error('新聞載入失敗:', error)
   } finally {
     isLoading.value = false
   }
 })
-
-// 轉換時間格式
-const formatDate = (timestamp: number) => {
-  return new Date(timestamp * 1000).toLocaleDateString('zh-TW')
-}
 </script>
 
 <template>
@@ -74,15 +82,18 @@ const formatDate = (timestamp: number) => {
       </div>
 
       <div v-else class="news-list">
+        <!-- 效能優化：使用 v-memo 指令來略過不必要的子樹重繪 -->
         <BaseCard 
           v-for="news in newsList" 
           :key="news.id" 
+          v-memo="[news.id]"
           :href="news.url" 
           class="hover:border-indigo-500"
         >
           <h2 class="news-title">{{ news.title }}</h2>
           <div class="news-meta">
-            <span>發布日期: {{ formatDate(news.time) }}</span>
+            <!-- 直接渲染格式化後的時間，避免在 template 呼叫 method 導致每次重繪都計算 -->
+            <span>發布日期: {{ news.formattedTime }}</span>
             <span>熱度: {{ news.score }}</span>
           </div>
         </BaseCard>

@@ -1,0 +1,34 @@
+# 依賴庫 (體積最大，AI 完全不需要讀取)
+node_modules/
+dist/
+.npm/
+
+# 靜態資源與圖片 (AI 無法從二進位檔學到東西)
+public/
+src/assets/images/
+src/assets/videos/
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.svg
+**/*.gif
+**/*.ico
+
+# 構建日誌與暫存檔
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.cache/
+.vite/
+
+# 系統檔案
+.DS_Store
+Thumbs.db
+.git/
+.vscode/
+.idea/
+
+# 各類 MCP 的本地快取或日誌
+mcp_logs/
+.antigravity/
