@@ -39,11 +39,11 @@ const submitForm = async () => {
 }
 </script>
 <template>
-  <div id="contact" class="contact-section">
+  <section id="contact" class="contact-section">
     <div class="content-container">
       <div class="header-container">
-        <h2 class="section-subtitle">聯絡我們</h2>
-        <p class="section-title">準備好開始您的專案了嗎？</p>
+        <span class="section-subtitle">聯絡我們</span>
+        <h2 class="section-title">準備好開始您的專案了嗎？</h2>
         <p class="section-description">
           無論是系統開發、網頁設計或技術諮詢，我們都隨時準備好為您提供專業的解決方案。請填寫下方表單或直接透過電子郵件與我們聯繫。
         </p>
@@ -127,7 +127,7 @@ const submitForm = async () => {
         </form>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>

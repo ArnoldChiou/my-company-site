@@ -1,5 +1,5 @@
 <template>
-  <div id="about" class="about-section">
+  <section id="about" class="about-section">
     <div class="bg-pattern-container">
       <svg class="bg-pattern" aria-hidden="true">
         <defs>
@@ -18,9 +18,9 @@
         <div class="lg:pr-4">
           <div class="lg:max-w-lg">
             <p class="section-subtitle">關於諾秋</p>
-            <h1 class="section-title">
+            <h2 class="section-title">
               不只是寫程式，更是創造價值
-            </h1>
+            </h2>
             <p class="section-description">
               諾秋工作室成立於 2022 年，我們是一群熱愛技術的開發者與設計師。我們的使命是透過最先進的網頁技術，與客戶共同成長。
             </p>
@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>

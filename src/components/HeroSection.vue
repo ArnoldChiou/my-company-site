@@ -11,7 +11,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="hero-section">
+  <header class="hero-section">
     <!-- Abstract background -->
     <div class="bg-image"></div>
     <div class="bg-effect-container" aria-hidden="true">
@@ -58,7 +58,7 @@ onMounted(() => {
         </div>
       </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <style scoped>

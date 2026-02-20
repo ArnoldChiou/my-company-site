@@ -1,9 +1,9 @@
 <template>
-  <div id="services" class="services-section">
+  <section id="services" class="services-section">
     <div class="content-container">
       <div class="header-container">
-        <h2 class="section-subtitle">我們的專業</h2>
-        <p class="section-title">全方位的數位解決方案</p>
+        <span class="section-subtitle">我們的專業</span>
+        <h2 class="section-title">全方位的數位解決方案</h2>
         <p class="section-description">
           無論是品牌形象網站、高效能應用程式、複雜的後端系統，我們都能為您量身打造。
         </p>
@@ -69,7 +69,7 @@
         </dl>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>

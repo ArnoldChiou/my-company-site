@@ -37,11 +37,11 @@ const projects = ref([
 </script>
 
 <template>
-  <div id="portfolio" class="portfolio-section">
+  <section id="portfolio" class="portfolio-section">
     <div class="content-container">
       <div class="header-container">
-        <h2 class="section-subtitle">成功案例</h2>
-        <p class="section-title">作品集</p>
+        <span class="section-subtitle">成功案例</span>
+        <h2 class="section-title">作品集</h2>
       </div>
       
       <div class="projects-grid">
@@ -51,7 +51,7 @@ const projects = ref([
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
