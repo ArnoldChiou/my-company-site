@@ -14,7 +14,12 @@
       </svg>
     </div>
     <div class="content-grid">
-      <div class="text-content-wrapper">
+      <div 
+        class="text-content-wrapper"
+        v-motion
+        :initial="{ opacity: 0, x: -50 }"
+        :visibleOnce="{ opacity: 1, x: 0, transition: { duration: 600, delay: 100 } }"
+      >
         <div class="lg:pr-4">
           <div class="lg:max-w-lg">
             <p class="section-subtitle">關於諾秋</p>
@@ -27,7 +32,12 @@
           </div>
         </div>
       </div>
-      <div class="image-wrapper">
+      <div 
+        class="image-wrapper"
+        v-motion
+        :initial="{ opacity: 0, scale: 0.95 }"
+        :visibleOnce="{ opacity: 1, scale: 1, transition: { duration: 600, delay: 300 } }"
+      >
         <img class="team-image" src="https://images.pexels.com/photos/2675055/pexels-photo-2675055.jpeg" alt="Team meeting">
       </div>
       <div class="detail-content-wrapper">

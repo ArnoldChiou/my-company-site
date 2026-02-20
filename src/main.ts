@@ -1,11 +1,20 @@
-import { createApp } from 'vue'
+import { ViteSSG } from 'vite-ssg'
 import { createHead } from '@unhead/vue/client'
+import { MotionPlugin } from '@vueuse/motion'
 import './assets/main.css'
 import App from './App.vue'
-import router from './router' // 新增
+import { routes, scrollBehavior } from './router'
 
-const app = createApp(App)
-const head = createHead()
-app.use(router) // 新增
-app.use(head)
-app.mount('#app')
+export const createApp = ViteSSG(
+    App,
+    {
+        routes,
+        base: import.meta.env.BASE_URL,
+        scrollBehavior
+    },
+    ({ app, router, routes, isClient, initialState }) => {
+        const head = createHead()
+        app.use(head)
+        app.use(MotionPlugin)
+    },
+)

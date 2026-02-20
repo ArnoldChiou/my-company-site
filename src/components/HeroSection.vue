@@ -1,13 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
-
-const showContent = ref(false)
-
-onMounted(() => {
-  setTimeout(() => {
-    showContent.value = true
-  }, 100)
-})
+// Animations are now handled by @vueuse/motion
 </script>
 
 <template>
@@ -19,7 +11,12 @@ onMounted(() => {
     </div>
 
     <div class="content-container">
-      <div class="text-content-wrapper transition-all duration-1000 ease-out transform" :class="showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
+      <div 
+        class="text-content-wrapper"
+        v-motion
+        :initial="{ opacity: 0, y: 30 }"
+        :enter="{ opacity: 1, y: 0, transition: { duration: 800, delay: 100 } }"
+      >
         <div class="mt-24 sm:mt-32 lg:mt-16">
           <a href="#" class="news-link">
             <span class="news-badge">最新消息</span>
@@ -50,7 +47,12 @@ onMounted(() => {
       
       <div class="image-section-wrapper">
         <div class="image-container-inner">
-          <div class="image-card">
+          <div 
+            class="image-card"
+            v-motion
+            :initial="{ opacity: 0, scale: 0.95, x: 50 }"
+            :enter="{ opacity: 1, scale: 1, x: 0, transition: { duration: 1000, delay: 300 } }"
+          >
             <img src="https://i.postimg.cc/zXMKvqRs/Gemini-Generated-Image-9fz9r49fz9r49fz9.png" 
                  alt="App screenshot" 
                  class="hero-image">

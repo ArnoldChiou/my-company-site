@@ -1,7 +1,12 @@
 <template>
   <section id="services" class="services-section">
     <div class="content-container">
-      <div class="header-container">
+      <div 
+        class="header-container"
+        v-motion
+        :initial="{ opacity: 0, y: -20 }"
+        :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 500 } }"
+      >
         <span class="section-subtitle">我們的專業</span>
         <h2 class="section-title">全方位的數位解決方案</h2>
         <p class="section-description">
@@ -10,7 +15,12 @@
       </div>
       <div class="services-grid-wrapper">
         <dl class="services-grid">
-          <div class="service-card group">
+          <div 
+            class="service-card group"
+            v-motion
+            :initial="{ opacity: 0, y: 30 }"
+            :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 500, delay: 100 } }"
+          >
             <dt class="service-header">
               <div class="icon-container group-hover:bg-indigo-500">
                 <svg class="service-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -24,7 +34,12 @@
             </dd>
           </div>
           
-          <div class="service-card group">
+          <div 
+            class="service-card group"
+            v-motion
+            :initial="{ opacity: 0, y: 30 }"
+            :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 500, delay: 100 } }"
+          >
             <dt class="service-header">
               <div class="icon-container group-hover:bg-indigo-500">
                  <svg class="service-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -38,7 +53,12 @@
             </dd>
           </div>
           
-          <div class="service-card group">
+          <div 
+            class="service-card group"
+            v-motion
+            :initial="{ opacity: 0, y: 30 }"
+            :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 500, delay: 100 } }"
+          >
             <dt class="service-header">
               <div class="icon-container group-hover:bg-indigo-500">
                 <svg class="service-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -52,7 +72,12 @@
             </dd>
           </div>
 
-          <div class="service-card group">
+          <div 
+            class="service-card group"
+            v-motion
+            :initial="{ opacity: 0, y: 30 }"
+            :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 500, delay: 100 } }"
+          >
             <dt class="service-header">
               <div class="icon-container group-hover:bg-indigo-500">
                 <svg class="service-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
