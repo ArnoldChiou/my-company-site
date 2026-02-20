@@ -1,5 +1,28 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: '最新科技動態 | My Company',
+  meta: [
+    { name: 'description', content: '整合 Hacker News 最新科技與程式開發動態，提供最即時的產業資訊。' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "最新科技動態",
+        "description": "整合 Hacker News 最新科技與程式開發動態，提供最即時的產業資訊。",
+        "publisher": {
+          "@type": "Organization",
+          "name": "My Company"
+        }
+      })
+    }
+  ]
+})
 
 interface NewsItem {
   id: number

@@ -1,3 +1,29 @@
+<script setup lang="ts">
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: '系統實作與技術架構 | My Company',
+  meta: [
+    { name: 'description', content: '探討我們的系統實作與技術架構，包含 Vue.js 前端開發、Python 後端與核心運算及 PHP 系統開發等專業技術。' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "系統實作與技術架構",
+        "author": {
+          "@type": "Organization",
+          "name": "My Company"
+        },
+        "description": "探討我們的系統實作與技術架構，包含 Vue.js 前端開發、Python 後端與核心運算及 PHP 系統開發等專業技術。"
+      })
+    }
+  ]
+})
+</script>
+
 <template>
   <div class="page-container">
     <div class="content-wrapper">

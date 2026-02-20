@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useHead } from '@unhead/vue'
 
 const faqs = ref([
   {
@@ -19,27 +20,30 @@ const faqs = ref([
     answer: '絕對是的！我們不僅遵循所有最新的技術 SEO 規範，包括 Semantic HTML、極速載入與響應式設計，更針對 AI 答案引擎(AEO)提供結構化資料(JSON-LD Schema)，讓您的網頁更容易被 AI 直接引用。'
   }
 ])
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.value.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      })
+    }
+  ]
+})
 </script>
 
 <template>
   <section id="faq" class="faq-section">
-    <!-- 加入 JSON-LD FAQ Schema 給 AI 答案引擎抓取 -->
-    <component :is="'script'" type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {{ faqs.map(faq => `{
-            "@type": "Question",
-            "name": "${faq.question}",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "${faq.answer}"
-            }
-          }`).join(',') }}
-        ]
-      }
-    </component>
 
     <div class="content-container">
       <div class="header-container">
