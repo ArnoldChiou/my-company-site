@@ -40,10 +40,11 @@ onMounted(() => {
           <br class="hidden sm:block">簡潔、高效、專業，是我們的承諾。
         </p>
         <div class="action-buttons">
-          <a href="#" class="btn-primary">開始專案</a>
-          <a href="#" class="btn-secondary group">
+          <router-link to="/#contact" class="btn-primary">開始專案</router-link>
+          
+          <router-link to="/#about" class="btn-secondary group">
             了解更多 <span aria-hidden="true" class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-          </a>
+          </router-link>
         </div>
       </div>
       
