@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BaseButton from './BaseButton.vue'
 // Animations are now handled by @vueuse/motion
 </script>
 
@@ -37,11 +38,11 @@
           <br class="hidden sm:block">簡潔、高效、專業，是我們的承諾。
         </p>
         <div class="action-buttons">
-          <router-link to="/#contact" class="btn-primary">開始專案</router-link>
+          <BaseButton to="/#contact" variant="primary">開始專案</BaseButton>
           
-          <router-link to="/#about" class="btn-secondary group">
+          <BaseButton to="/#about" variant="secondary" class="group">
             了解更多 <span aria-hidden="true" class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-          </router-link>
+          </BaseButton>
         </div>
       </div>
       
@@ -111,14 +112,6 @@
 
 .action-buttons {
   @apply mt-10 flex items-center gap-x-6;
-}
-
-.btn-primary {
-  @apply rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all duration-300 hover:scale-105 shadow-indigo-500/50;
-}
-
-.btn-secondary {
-  @apply text-sm font-semibold leading-6 text-white flex items-center;
 }
 
 .image-section-wrapper {

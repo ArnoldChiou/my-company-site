@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useHead } from '@unhead/vue'
+import BaseCard from '../components/BaseCard.vue'
 
 useHead({
   title: '最新科技動態 | My Company',
@@ -73,20 +74,18 @@ const formatDate = (timestamp: number) => {
       </div>
 
       <div v-else class="news-list">
-        <a 
+        <BaseCard 
           v-for="news in newsList" 
           :key="news.id" 
           :href="news.url" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="news-card"
+          class="hover:border-indigo-500"
         >
           <h2 class="news-title">{{ news.title }}</h2>
           <div class="news-meta">
             <span>發布日期: {{ formatDate(news.time) }}</span>
             <span>熱度: {{ news.score }}</span>
           </div>
-        </a>
+        </BaseCard>
       </div>
     </div>
   </div>
@@ -116,10 +115,6 @@ const formatDate = (timestamp: number) => {
 
 .news-list {
   @apply space-y-4;
-}
-
-.news-card {
-  @apply block bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-indigo-500 transition-colors;
 }
 
 .news-title {

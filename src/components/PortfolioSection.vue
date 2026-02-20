@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import BaseCard from './BaseCard.vue'
 
 // 在此陣列中新增或修改專案資料
 const projects = ref([
@@ -45,10 +46,10 @@ const projects = ref([
       </div>
       
       <div class="projects-grid">
-        <div v-for="project in projects" :key="project.id" class="project-card">
+        <BaseCard v-for="project in projects" :key="project.id" class="flex flex-col">
           <h3 class="project-title">{{ project.title }}</h3>
           <p class="project-description">{{ project.description }}</p>
-        </div>
+        </BaseCard>
       </div>
     </div>
   </section>
@@ -78,10 +79,6 @@ const projects = ref([
 
 .projects-grid {
   @apply mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3;
-}
-
-.project-card {
-  @apply bg-slate-800 rounded-2xl p-6 border border-slate-700;
 }
 
 .project-title {

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import BaseButton from './BaseButton.vue'
 
 const isMenuOpen = ref(false)
 
@@ -25,7 +26,7 @@ const toggleMenu = () => {
               <router-link to="/#about" class="nav-link">關於我們</router-link>
               <router-link to="/#services" class="nav-link">服務項目</router-link>
               <router-link to="/#portfolio" class="nav-link">作品集</router-link>
-              <router-link to="/#contact" class="btn-contact">聯絡我們</router-link>
+              <BaseButton to="/#contact" variant="contact">聯絡我們</BaseButton>
             </div>
           </div>
         </div>
@@ -89,10 +90,6 @@ const toggleMenu = () => {
 
 .nav-link {
   @apply text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors;
-}
-
-.btn-contact {
-  @apply bg-indigo-600/90 hover:bg-indigo-500 text-white px-4 py-2 rounded-md text-sm font-medium transition-all shadow-lg shadow-indigo-500/30;
 }
 
 .mobile-menu-btn {
