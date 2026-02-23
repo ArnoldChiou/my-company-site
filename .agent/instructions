@@ -1,0 +1,25 @@
+Vue 專屬開發 Skill 規範
+
+1. 技術棧與編碼 Skill (Core Tech)
+Vue 3 標準：一律使用 <script setup> 與 TypeScript。
+樣式規範：優先使用 Tailwind CSS，除非複雜動畫否則不使用 Scoped CSS。
+UI 組件：組件需具備高度可複用性，並置於 src/components/ 下。
+
+2. SEO 與 業務 Skill (Business Logic)
+品牌名稱：諾秋工作室 (Nocturne Studio)。
+SEO 優先：在建立新頁面時，自動檢查並更新 sitemap.xml 與 robots.txt 邏輯。
+Meta 管理：每個 View 組件必須包含 SEO Meta Tags 設置（如 title, description）。
+
+3. 自動化驗證 Skill (Workflow)
+瀏覽器測試：在修改 UI 後，主動使用 chrome-devtools 進行截圖，驗證在行動端與桌面端的排版是否跑版。
+代碼清理：完成任務後，自動移除未使用的 Import 與 console.log。
+
+4. 交互指令 (Slash Commands)
+/new-page：建立新頁面，包含對應的 Route 配置與 Meta 標籤。
+/refactor-ui：將 HTML 片段重構為獨立的 Vue 組件，並抽離 Tailwind 樣式。
+
+## Programmatic Tooling 規範
+- 當任務涉及 3 個以上的檔案操作時，禁止逐一調用工具。
+- 必須撰寫一個獨立的 `temporary_task.js`。
+- 在腳本中直接使用 `fs` 模組或預裝的 `mcp-sdk` 處理邏輯。
+- 僅在腳本執行完畢後，回傳執行結果摘要（如：已處理檔案清單），而非檔案完整內容。

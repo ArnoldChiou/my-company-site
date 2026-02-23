@@ -1,0 +1,28 @@
+Vue 3 開發規範 (.cursorrules)
+核心技術棧
+• Framework: Vue 3 (Composition API)
+
+• Script: 必須使用 `<script setup>`
+
+• Style: Tailwind CSS
+
+• State: Pinia
+
+開發準則
+1. 精簡回傳：修改程式碼時，僅提供變更的部分（diff），除非必要否則不重寫整個檔案。
+
+2. 目錄結構：
+
+  • 組件：`src/components`
+
+  • 頁面：`src/views`
+
+  • 邏輯複用：`src/composables`
+
+3. 命名規範：組件名稱使用大駝峰（PascalCase），例如 `UserCard.vue`。
+
+4. TypeScript：嚴格執行類型定義，不使用 `any`。
+
+Token 節省策略
+• 優先參考 `@src/types` 或現有 interface。
+• 邏輯與視圖分離，複雜邏輯拆分至 composables。
