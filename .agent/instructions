@@ -23,3 +23,10 @@ Meta 管理：每個 View 組件必須包含 SEO Meta Tags 設置（如 title, d
 - 必須撰寫一個獨立的 `temporary_task.js`。
 - 在腳本中直接使用 `fs` 模組或預裝的 `mcp-sdk` 處理邏輯。
 - 僅在腳本執行完畢後，回傳執行結果摘要（如：已處理檔案清單），而非檔案完整內容。
+
+## 終端機與環境規範 (Environment Rules)
+- 作業系統：Windows (PowerShell)。
+- 禁用指令：嚴禁使用 `grep`、`ls`、`cat`、`rm` 等 Linux 專用指令。
+- 檔案操作與搜尋優先級：
+  1. 優先使用 Node.js 腳本（`fs` 模組）或 `filesystem` MCP 進行檔案讀寫與關鍵字搜尋（符合 Programmatic Tooling 規範）。
+  2. 若絕對必要使用終端機指令，請務必使用 PowerShell 對應語法（例如：用 `Select-String` 替代 `grep`，用 `Get-Content` 替代 `cat`，用 `dir` 替代 `ls`）。
