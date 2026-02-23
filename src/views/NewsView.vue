@@ -4,7 +4,7 @@ import { useHead } from '@unhead/vue'
 import BaseCard from '../components/BaseCard.vue'
 
 useHead({
-  title: '最新科技動態 | My Company',
+  title: '最新科技動態 | 諾秋工作室',
   meta: [
     { name: 'description', content: '整合 Hacker News 最新科技與程式開發動態，提供最即時的產業資訊。' }
   ],
@@ -18,7 +18,7 @@ useHead({
         "description": "整合 Hacker News 最新科技與程式開發動態，提供最即時的產業資訊。",
         "publisher": {
           "@type": "Organization",
-          "name": "My Company"
+          "name": "諾秋工作室"
         }
       })
     }

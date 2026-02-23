@@ -2,7 +2,7 @@
 import { useHead } from '@unhead/vue'
 
 useHead({
-  title: '系統實作與技術架構 | My Company',
+  title: '系統實作與技術架構 | 諾秋工作室',
   meta: [
     { name: 'description', content: '探討我們的系統實作與技術架構，包含 Vue.js 前端開發、Python 後端與核心運算及 PHP 系統開發等專業技術。' }
   ],
@@ -15,7 +15,7 @@ useHead({
         "headline": "系統實作與技術架構",
         "author": {
           "@type": "Organization",
-          "name": "My Company"
+          "name": "諾秋工作室"
         },
         "description": "探討我們的系統實作與技術架構，包含 Vue.js 前端開發、Python 後端與核心運算及 PHP 系統開發等專業技術。"
       })

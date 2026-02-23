@@ -8,7 +8,7 @@ import FAQSection from '../components/FAQSection.vue'
 import ContactSection from '../components/ContactSection.vue'
 
 useHead({
-  title: 'My Company | 專業的系統開發與解決方案',
+  title: '諾秋工作室 | 專業軟體開發與網頁設計',
   meta: [
     { name: 'description', content: '提供專業的系統開發、量化交易策略、前後端整合等企業級客製化解決方案。' }
   ],
@@ -18,7 +18,7 @@ useHead({
       innerHTML: JSON.stringify({
         "@context": "https://schema.org",
         "@type": ["Organization", "LocalBusiness"],
-        "name": "My Company",
+        "name": "諾秋工作室",
         "url": "https://www.my-company-site.com",
         "description": "提供專業的系統開發、量化交易策略、前後端整合等企業級客製化解決方案。",
         "contactPoint": {

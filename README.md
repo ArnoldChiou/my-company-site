@@ -1,4 +1,4 @@
-# My Company Site - 現代化響應式企業網站
+# 諾秋工作室 - 現代化響應式企業網站
 
 這是一個基於 **Vue 3** 與 **TypeScript** 建構的現代化企業形象網站。設計風格採用深色主題 (Dark Mode)，結合了玻璃擬態 (Glassmorphism) 與流暢的微動畫 (Micro-animations)，展現高端科技感與專業形象。
 
