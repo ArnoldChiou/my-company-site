@@ -1,34 +1,34 @@
 <script setup lang="ts">
-import { useHead } from '@unhead/vue'
 import HeroSection from '../components/HeroSection.vue'
 import AboutSection from '../components/AboutSection.vue'
 import ServicesSection from '../components/ServicesSection.vue'
 import PortfolioSection from '../components/PortfolioSection.vue'
 import FAQSection from '../components/FAQSection.vue'
 import ContactSection from '../components/ContactSection.vue'
+import { SITE_NAME, SITE_URL, useSiteSeo } from '../utils/seo'
 
-useHead({
+const description = '提供專業的系統開發、量化交易策略、前後端整合等企業級客製化解決方案。'
+
+useSiteSeo({
   title: '諾秋工作室 | 專業軟體開發與網頁設計',
-  meta: [
-    { name: 'description', content: '提供專業的系統開發、量化交易策略、前後端整合等企業級客製化解決方案。' }
-  ],
-  script: [
-    {
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": ["Organization", "LocalBusiness"],
-        "name": "諾秋工作室",
-        "url": "https://www.my-company-site.com",
-        "description": "提供專業的系統開發、量化交易策略、前後端整合等企業級客製化解決方案。",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+886-2-1234-5678",
-          "contactType": "customer support"
-        }
-      })
+  description,
+  path: '/',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': ['Organization', 'LocalBusiness'],
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
+    description,
+    email: 'nordchiou@gmail.com',
+    telephone: '+886-926-192-178',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+886-926-192-178',
+      contactType: 'customer support',
+      availableLanguage: ['zh-TW']
     }
-  ]
+  }
 })
 </script>
 

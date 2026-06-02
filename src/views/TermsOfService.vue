@@ -1,3 +1,27 @@
+<script setup lang="ts">
+import { SITE_NAME, SITE_URL, useSiteSeo } from '../utils/seo'
+
+const description = '諾秋工作室服務條款，說明專案服務內容、智慧財產權、客戶義務、免責聲明與終止服務規範。'
+
+useSiteSeo({
+  title: '服務條款 | 諾秋工作室',
+  description,
+  path: '/terms-of-service',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: '服務條款',
+    url: `${SITE_URL}/terms-of-service`,
+    description,
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL
+    }
+  }
+})
+</script>
+
 <template>
   <div class="page-container">
     <div class="content-wrapper">

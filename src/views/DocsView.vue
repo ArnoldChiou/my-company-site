@@ -1,26 +1,33 @@
 <script setup lang="ts">
-import { useHead } from '@unhead/vue'
+import { SITE_NAME, SITE_URL, useSiteSeo } from '../utils/seo'
 
-useHead({
+const description = '探討我們的系統實作與技術架構，包含 Vue.js 前端開發、Python 後端與核心運算及 PHP 系統開發等專業技術。'
+
+useSiteSeo({
   title: '系統實作與技術架構 | 諾秋工作室',
-  meta: [
-    { name: 'description', content: '探討我們的系統實作與技術架構，包含 Vue.js 前端開發、Python 後端與核心運算及 PHP 系統開發等專業技術。' }
-  ],
-  script: [
-    {
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "系統實作與技術架構",
-        "author": {
-          "@type": "Organization",
-          "name": "諾秋工作室"
-        },
-        "description": "探討我們的系統實作與技術架構，包含 Vue.js 前端開發、Python 後端與核心運算及 PHP 系統開發等專業技術。"
-      })
-    }
-  ]
+  description,
+  path: '/docs',
+  type: 'article',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: '系統實作與技術架構',
+    url: `${SITE_URL}/docs`,
+    author: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/logo.png`
+      }
+    },
+    description
+  }
 })
 </script>
 

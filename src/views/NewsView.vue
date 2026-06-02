@@ -1,28 +1,26 @@
 <script setup lang="ts">
 import { ref, shallowRef, onMounted } from 'vue'
-import { useHead } from '@unhead/vue'
 import BaseCard from '../components/BaseCard.vue'
+import { SITE_NAME, SITE_URL, useSiteSeo } from '../utils/seo'
 
-useHead({
+const description = '整合 Hacker News 最新科技與程式開發動態，提供最即時的產業資訊。'
+
+useSiteSeo({
   title: '最新科技動態 | 諾秋工作室',
-  meta: [
-    { name: 'description', content: '整合 Hacker News 最新科技與程式開發動態，提供最即時的產業資訊。' }
-  ],
-  script: [
-    {
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "最新科技動態",
-        "description": "整合 Hacker News 最新科技與程式開發動態，提供最即時的產業資訊。",
-        "publisher": {
-          "@type": "Organization",
-          "name": "諾秋工作室"
-        }
-      })
+  description,
+  path: '/news',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: '最新科技動態',
+    url: `${SITE_URL}/news`,
+    description,
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL
     }
-  ]
+  }
 })
 
 interface NewsItem {

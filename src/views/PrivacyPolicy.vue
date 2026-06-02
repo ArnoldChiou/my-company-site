@@ -1,3 +1,27 @@
+<script setup lang="ts">
+import { SITE_NAME, SITE_URL, useSiteSeo } from '../utils/seo'
+
+const description = '了解諾秋工作室如何收集、使用與保護您的個人資料，以及 Cookie 與隱私權政策更新方式。'
+
+useSiteSeo({
+  title: '隱私權政策 | 諾秋工作室',
+  description,
+  path: '/privacy-policy',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: '隱私權政策',
+    url: `${SITE_URL}/privacy-policy`,
+    description,
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL
+    }
+  }
+})
+</script>
+
 <template>
   <div class="page-container">
     <div class="content-wrapper">

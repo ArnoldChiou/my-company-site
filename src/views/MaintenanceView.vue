@@ -1,3 +1,29 @@
+<script setup lang="ts">
+import { SITE_NAME, SITE_URL, useSiteSeo } from '../utils/seo'
+
+const description = '諾秋工作室提供系統維護、效能監控、安全性更新、資料備份與 Bug 修復服務，協助既有系統穩定運作。'
+
+useSiteSeo({
+  title: '系統維護服務 | 諾秋工作室',
+  description,
+  path: '/maintenance',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: '系統維護服務',
+    url: `${SITE_URL}/maintenance`,
+    description,
+    provider: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL
+    },
+    areaServed: 'Taiwan',
+    serviceType: ['系統維護', '效能監控', '安全性更新', '資料備份', 'Bug 修復']
+  }
+})
+</script>
+
 <template>
   <div class="page-container">
     <div class="content-wrapper">
