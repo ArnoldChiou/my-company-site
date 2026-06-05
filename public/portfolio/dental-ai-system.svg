@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">牙醫 AI 辨識系統介面示意</title>
+  <desc id="desc">醫療影像檢視器與 AI 辨識結果面板。</desc>
+  <rect width="1200" height="675" fill="#ecfeff"/>
+  <rect x="50" y="44" width="1100" height="587" rx="28" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="84" y="78" width="180" height="519" rx="18" fill="#f1f5f9"/>
+  <rect x="294" y="78" width="568" height="519" rx="22" fill="#0f172a"/>
+  <rect x="892" y="78" width="218" height="519" rx="18" fill="#f8fafc"/>
+  <rect x="114" y="118" width="116" height="14" rx="7" fill="#64748b"/>
+  <g fill="#cbd5e1">
+    <rect x="114" y="174" width="132" height="12" rx="6"/>
+    <rect x="114" y="220" width="98" height="12" rx="6"/>
+    <rect x="114" y="266" width="124" height="12" rx="6"/>
+    <rect x="114" y="312" width="108" height="12" rx="6"/>
+  </g>
+  <rect x="114" y="464" width="116" height="42" rx="12" fill="#14b8a6"/>
+  <g opacity=".95">
+    <ellipse cx="578" cy="322" rx="214" ry="166" fill="#111827"/>
+    <path d="M410 354c58-128 114-154 166-72 44-86 104-62 166 44" fill="none" stroke="#cbd5e1" stroke-width="16" stroke-linecap="round"/>
+    <path d="M428 396c42-56 92-62 146-18 58-52 122-44 192 24" fill="none" stroke="#94a3b8" stroke-width="14" stroke-linecap="round"/>
+    <path d="M432 270c46-34 90-32 132 6 52-44 112-38 180 18" fill="none" stroke="#64748b" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="530" cy="312" r="30" fill="none" stroke="#22c55e" stroke-width="6"/>
+    <circle cx="642" cy="358" r="38" fill="none" stroke="#38bdf8" stroke-width="6"/>
+    <rect x="454" y="248" width="132" height="72" rx="12" fill="none" stroke="#14b8a6" stroke-width="4" stroke-dasharray="12 10"/>
+    <rect x="614" y="326" width="146" height="86" rx="12" fill="none" stroke="#38bdf8" stroke-width="4" stroke-dasharray="12 10"/>
+  </g>
+  <rect x="920" y="118" width="132" height="14" rx="7" fill="#334155"/>
+  <rect x="920" y="170" width="160" height="72" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="920" y="268" width="160" height="72" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="920" y="366" width="160" height="72" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+  <g fill="#14b8a6">
+    <rect x="946" y="198" width="76" height="10" rx="5"/>
+    <rect x="946" y="296" width="94" height="10" rx="5"/>
+    <rect x="946" y="394" width="64" height="10" rx="5"/>
+  </g>
+  <g fill="#cbd5e1">
+    <rect x="946" y="216" width="116" height="8" rx="4"/>
+    <rect x="946" y="314" width="98" height="8" rx="4"/>
+    <rect x="946" y="412" width="118" height="8" rx="4"/>
+  </g>
+  <rect x="920" y="496" width="160" height="44" rx="12" fill="#0f766e"/>
+</svg>

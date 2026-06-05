@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">系統維護與客製化開發介面示意</title>
+  <desc id="desc">維運監控、部署流程與問題追蹤的管理畫面。</desc>
+  <rect width="1200" height="675" fill="#111827"/>
+  <rect x="52" y="44" width="1096" height="587" rx="28" fill="#0b1120" stroke="#334155" stroke-width="2"/>
+  <rect x="86" y="78" width="1028" height="64" rx="18" fill="#111827"/>
+  <rect x="120" y="102" width="156" height="14" rx="7" fill="#475569"/>
+  <circle cx="1032" cy="110" r="12" fill="#22c55e"/>
+  <circle cx="1070" cy="110" r="12" fill="#f59e0b"/>
+  <rect x="86" y="174" width="304" height="236" rx="20" fill="#111827"/>
+  <rect x="422" y="174" width="304" height="236" rx="20" fill="#111827"/>
+  <rect x="758" y="174" width="356" height="236" rx="20" fill="#111827"/>
+  <rect x="86" y="438" width="692" height="164" rx="20" fill="#111827"/>
+  <rect x="810" y="438" width="304" height="164" rx="20" fill="#111827"/>
+  <path d="M128 344h42l36-84 42 52 36-118 44 150" fill="none" stroke="#22c55e" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#334155">
+    <rect x="128" y="214" width="118" height="12" rx="6"/>
+    <rect x="462" y="214" width="118" height="12" rx="6"/>
+    <rect x="798" y="214" width="118" height="12" rx="6"/>
+  </g>
+  <g>
+    <rect x="462" y="272" width="76" height="40" rx="12" fill="#0f766e"/>
+    <rect x="564" y="272" width="76" height="40" rx="12" fill="#0369a1"/>
+    <rect x="462" y="338" width="76" height="40" rx="12" fill="#4c1d95"/>
+    <rect x="564" y="338" width="76" height="40" rx="12" fill="#92400e"/>
+    <path d="M538 292h26M602 312v26M500 338v-26M538 358h26" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g fill="#1f2937">
+    <rect x="798" y="260" width="270" height="12" rx="6"/>
+    <rect x="798" y="306" width="210" height="12" rx="6"/>
+    <rect x="798" y="352" width="248" height="12" rx="6"/>
+  </g>
+  <g fill="#22c55e">
+    <circle cx="780" cy="266" r="8"/>
+    <circle cx="780" cy="312" r="8"/>
+    <circle cx="780" cy="358" r="8"/>
+  </g>
+  <g transform="translate(126 480)">
+    <rect width="124" height="68" rx="14" fill="#0f172a" stroke="#334155"/>
+    <rect x="154" width="124" height="68" rx="14" fill="#0f172a" stroke="#334155"/>
+    <rect x="308" width="124" height="68" rx="14" fill="#0f172a" stroke="#334155"/>
+    <rect x="462" width="124" height="68" rx="14" fill="#0f172a" stroke="#334155"/>
+    <path d="M124 34h30M278 34h30M432 34h30" stroke="#475569" stroke-width="5" stroke-linecap="round"/>
+    <rect x="24" y="26" width="76" height="14" rx="7" fill="#22c55e"/>
+    <rect x="178" y="26" width="76" height="14" rx="7" fill="#38bdf8"/>
+    <rect x="332" y="26" width="76" height="14" rx="7" fill="#f59e0b"/>
+    <rect x="486" y="26" width="76" height="14" rx="7" fill="#22c55e"/>
+  </g>
+  <rect x="852" y="488" width="150" height="12" rx="6" fill="#334155"/>
+  <rect x="852" y="524" width="210" height="12" rx="6" fill="#334155"/>
+  <rect x="852" y="560" width="180" height="12" rx="6" fill="#334155"/>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">企業形象官網介面示意</title>
+  <desc id="desc">品牌網站首頁、服務區塊與聯絡區塊的響應式版面。</desc>
+  <rect width="1200" height="675" fill="#f8fafc"/>
+  <rect x="56" y="44" width="1092" height="587" rx="28" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="56" y="44" width="1092" height="72" rx="28" fill="#0f172a"/>
+  <rect x="92" y="74" width="128" height="14" rx="7" fill="#e2e8f0"/>
+  <rect x="734" y="74" width="58" height="12" rx="6" fill="#64748b"/>
+  <rect x="820" y="74" width="58" height="12" rx="6" fill="#64748b"/>
+  <rect x="906" y="74" width="58" height="12" rx="6" fill="#64748b"/>
+  <rect x="996" y="64" width="90" height="32" rx="10" fill="#06b6d4"/>
+  <rect x="92" y="162" width="420" height="38" rx="10" fill="#0f172a"/>
+  <rect x="92" y="222" width="334" height="18" rx="9" fill="#94a3b8"/>
+  <rect x="92" y="254" width="384" height="18" rx="9" fill="#cbd5e1"/>
+  <rect x="92" y="312" width="128" height="42" rx="12" fill="#0f172a"/>
+  <rect x="238" y="312" width="128" height="42" rx="12" fill="#e2e8f0"/>
+  <rect x="648" y="152" width="408" height="228" rx="24" fill="#eff6ff"/>
+  <rect x="684" y="188" width="336" height="48" rx="16" fill="#ffffff"/>
+  <rect x="712" y="206" width="112" height="12" rx="6" fill="#38bdf8"/>
+  <rect x="684" y="258" width="156" height="84" rx="18" fill="#ffffff"/>
+  <rect x="864" y="258" width="156" height="84" rx="18" fill="#ffffff"/>
+  <rect x="714" y="288" width="92" height="12" rx="6" fill="#94a3b8"/>
+  <rect x="894" y="288" width="92" height="12" rx="6" fill="#94a3b8"/>
+  <rect x="92" y="438" width="320" height="128" rx="20" fill="#f1f5f9"/>
+  <rect x="442" y="438" width="320" height="128" rx="20" fill="#f1f5f9"/>
+  <rect x="792" y="438" width="320" height="128" rx="20" fill="#f1f5f9"/>
+  <circle cx="132" cy="480" r="18" fill="#06b6d4"/>
+  <circle cx="482" cy="480" r="18" fill="#fb7185"/>
+  <circle cx="832" cy="480" r="18" fill="#22c55e"/>
+  <g fill="#94a3b8">
+    <rect x="166" y="468" width="156" height="12" rx="6"/>
+    <rect x="166" y="500" width="228" height="10" rx="5"/>
+    <rect x="166" y="524" width="178" height="10" rx="5"/>
+    <rect x="516" y="468" width="156" height="12" rx="6"/>
+    <rect x="516" y="500" width="228" height="10" rx="5"/>
+    <rect x="516" y="524" width="178" height="10" rx="5"/>
+    <rect x="866" y="468" width="156" height="12" rx="6"/>
+    <rect x="866" y="500" width="228" height="10" rx="5"/>
+    <rect x="866" y="524" width="178" height="10" rx="5"/>
+  </g>
+</svg>

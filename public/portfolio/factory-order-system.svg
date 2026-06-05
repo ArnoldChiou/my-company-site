@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">工廠訂單管理系統介面示意</title>
+  <desc id="desc">深色系訂單、排程與生產進度儀表板畫面。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#14b8a6"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="48" y="44" width="1104" height="587" rx="28" fill="#020617" stroke="#1e293b" stroke-width="2"/>
+  <rect x="80" y="78" width="180" height="509" rx="18" fill="#0f172a"/>
+  <rect x="292" y="78" width="820" height="74" rx="18" fill="#0f172a"/>
+  <rect x="320" y="100" width="210" height="14" rx="7" fill="#334155"/>
+  <rect x="320" y="126" width="132" height="10" rx="5" fill="#1e293b"/>
+  <rect x="920" y="101" width="64" height="14" rx="7" fill="#14b8a6"/>
+  <rect x="1000" y="101" width="64" height="14" rx="7" fill="#f59e0b"/>
+  <g fill="#1e293b">
+    <rect x="108" y="106" width="116" height="16" rx="8"/>
+    <rect x="108" y="168" width="132" height="12" rx="6"/>
+    <rect x="108" y="214" width="104" height="12" rx="6"/>
+    <rect x="108" y="260" width="126" height="12" rx="6"/>
+    <rect x="108" y="306" width="92" height="12" rx="6"/>
+    <rect x="108" y="352" width="130" height="12" rx="6"/>
+    <rect x="108" y="398" width="110" height="12" rx="6"/>
+  </g>
+  <rect x="108" y="466" width="112" height="40" rx="12" fill="#134e4a"/>
+  <circle cx="128" cy="486" r="8" fill="#2dd4bf"/>
+  <rect x="146" y="480" width="54" height="12" rx="6" fill="#5eead4"/>
+  <g>
+    <rect x="292" y="184" width="244" height="132" rx="18" fill="#0f172a"/>
+    <rect x="564" y="184" width="244" height="132" rx="18" fill="#0f172a"/>
+    <rect x="836" y="184" width="276" height="132" rx="18" fill="#0f172a"/>
+    <path d="M326 270h62v-42h68v42h54" fill="none" stroke="#14b8a6" stroke-width="12" stroke-linecap="round"/>
+    <path d="M596 270h48v-26h58v-38h68" fill="none" stroke="#f59e0b" stroke-width="12" stroke-linecap="round"/>
+    <path d="M876 270h48v-54h52v34h58v-72h58" fill="none" stroke="#38bdf8" stroke-width="12" stroke-linecap="round"/>
+    <g fill="#334155">
+      <rect x="326" y="210" width="84" height="10" rx="5"/>
+      <rect x="596" y="210" width="104" height="10" rx="5"/>
+      <rect x="876" y="210" width="116" height="10" rx="5"/>
+    </g>
+  </g>
+  <rect x="292" y="344" width="536" height="243" rx="20" fill="#0f172a"/>
+  <g stroke="#1e293b" stroke-width="1">
+    <path d="M332 384h468M332 430h468M332 476h468M332 522h468"/>
+    <path d="M410 372v178M506 372v178M602 372v178M698 372v178"/>
+  </g>
+  <g fill="#14b8a6">
+    <rect x="380" y="398" width="126" height="22" rx="6"/>
+    <rect x="456" y="444" width="206" height="22" rx="6"/>
+    <rect x="602" y="490" width="116" height="22" rx="6"/>
+  </g>
+  <g fill="#f59e0b">
+    <rect x="698" y="398" width="90" height="22" rx="6"/>
+    <rect x="708" y="536" width="116" height="22" rx="6"/>
+  </g>
+  <rect x="856" y="344" width="256" height="243" rx="20" fill="#0f172a"/>
+  <circle cx="936" cy="464" r="52" fill="none" stroke="#1e293b" stroke-width="26"/>
+  <path d="M936 412a52 52 0 0 1 48 72" fill="none" stroke="#14b8a6" stroke-width="26" stroke-linecap="round"/>
+  <path d="M984 484a52 52 0 0 1-88 22" fill="none" stroke="#f59e0b" stroke-width="26" stroke-linecap="round"/>
+  <rect x="1006" y="404" width="70" height="10" rx="5" fill="#334155"/>
+  <rect x="1006" y="438" width="90" height="10" rx="5" fill="#334155"/>
+  <rect x="1006" y="472" width="54" height="10" rx="5" fill="#334155"/>
+  <rect x="1006" y="506" width="82" height="10" rx="5" fill="#334155"/>
+  <rect x="48" y="44" width="1104" height="587" rx="28" fill="none" stroke="url(#accent)" stroke-opacity=".25" stroke-width="2"/>
+</svg>
